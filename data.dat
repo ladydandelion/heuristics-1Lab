@@ -1,3 +1,4 @@
+data;
 set AIRPLANES := Av1 Av2 Av3 Av4 Av5;
 set SLOTS := Standard LeisurePlus BusinessPlus;
 
@@ -24,3 +25,7 @@ Av2 2700
 Av3 1300
 Av4 1700
 Av5 2000;
+
+
+
+end;
