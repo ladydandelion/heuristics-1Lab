@@ -1,0 +1,118 @@
+data;
+/* Definition of the set of entrances */
+set Entrances := EastMain NorthSecondary WestSecondary;
+
+/* Definition of the set of resources */
+set Resources := VendingMachines Turnstiles Employees;
+
+/* Subset of resources only containing VendingMachines and Turnstiles */
+set Resources2 := VendingMachines Turnstiles;
+
+/* Subset of resources only containing turnstiles */
+set ResourceTurnstiles := Turnstiles; 
+
+/* Subset of entrances only for EastMain entrance*/
+set EastEntrance := EastMain;
+
+/* Subset of entrances only for NorthSecondary entrance*/
+set NorthEntrance := NorthSecondary;
+
+/* Subset of entrances only for WestSecondary entrance*/
+set WestEntrance := WestSecondary;
+
+/* Definition of the set of robots */
+set Robots := R1 R2 R3 R4 R5 R6 R7 R8;
+
+/* Subset of robots that can only be on the east side */
+set RobotsOnlyEast := R3 R5 R6;
+
+/* Subset of robots that can only be on the west side */
+set RobotsOnlyWest := R2 R4;
+
+/* Definition of the set of galleries */
+set Galleries := A B C D E F G H I J K L M N O P Q;
+/* Definition of the subset of galleries on the  west */
+set GalleriesWest := A B C D E F G H I J;
+
+/* Definition of the subset of galleries on the  east */
+set GalleriesEast := K L M N O P Q;
+
+/* Subset of galleries C D */
+set GalleriesCD := C D;
+
+/* Subset of galleries  A B */
+set GalleriesAB := A B;
+
+/* Definition of cost of each resource */
+param ResourcesCost :=
+VendingMachines 32
+Turnstiles 40
+Employees 64;
+
+/* Definition Average time reduction of each resource*/
+param ResourcesTimeReduction :=
+VendingMachines 2
+Turnstiles 3
+Employees 4;
+
+/* Defintion of current waiting time of each entrance */
+param AverageWaitingTime :=
+EastMain 130
+NorthSecondary 90
+WestSecondary 100;
+
+/* Definition of  max energy of each robot */
+param Max_energy := 
+R1 100
+R2 90
+R3 95
+R4 40
+R5 45
+R6 75
+R7 85
+R8 60;
+
+/* Definition of time for each robot to make a presentation */
+param PresentationTime := 
+R1 4
+R2 6
+R3 5
+R4 3
+R5 2
+R6 3
+R7 4
+R8 5;
+
+/* Definition of energy units each robot requires for item presented */
+param EnergyTime :=
+R1 7
+R2 5
+R3 3
+R4 1
+R5 2
+R6 4
+R7 4
+R8 5;
+
+/* Definition of number of items per gallery */
+param GalleryItems :=
+A 5
+B 5
+C 5
+D 6
+E 6
+F 4
+G 4
+H 4
+I 7
+J 7
+K 3
+L 3
+M 3
+N 2
+O 2
+P 2
+Q 2;
+
+end;
+
