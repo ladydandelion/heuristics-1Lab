@@ -1,6 +1,24 @@
 data;
+
 set AIRPLANES := Av1 Av2 Av3 Av4 Av5;
+
+set PLANE1 := Av1;
+
+set PLANE2 := Av2;
+
+set PLANE3 := Av3;
+
+set PLANE4 := Av4;
+
+set PLANE5 := Av5;
+
 set SLOTS := Standard LeisurePlus BusinessPlus;
+
+set TYPE1 := Standard;
+
+set TYPE2 := LeisurePlus;
+
+set TYPE3 := BusinessPlus;
 
 param baggage :=
 Standard 1
@@ -25,7 +43,5 @@ Av2 2700
 Av3 1300
 Av4 1700
 Av5 2000;
-
-
 
 end;
