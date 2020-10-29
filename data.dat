@@ -11,7 +11,7 @@ Standard 19
 LeisurePlus 49
 BusinessPlus 69;
 
-param seats :=
+param totalAirplaneSeats :=
 Av1 90
 Av2 120
 Av3 200
