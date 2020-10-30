@@ -44,16 +44,19 @@ minimize DelayCosts:
 
 /*DECISION VARIABLES
 ----------------------------------------------------------------------------------*/
-s.t. constraint1 {s in AVAILABLESLOTS}:
-    sum {a in PLANE1} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint2 {s in AVAILABLESLOTS}:
-    sum {a in PLANE2} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint3 {s in AVAILABLESLOTS}:
-    sum {a in PLANE3} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint4 {s in AVAILABLESLOTS}:
-    sum {a in PLANE4} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint5 {s in AVAILABLESLOTS}:
-    sum {a in PLANE5} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint44:
+    sum {a in AIRPLANES, s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] = 5;
+
+s.t. constraint1 {a in PLANE1}:
+    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint2 {a in PLANE2}:
+    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint3 {a in PLANE3}:
+    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint4 {a in PLANE4}:
+    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint5 {a in PLANE5}:
+    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] <= 1;
 
 s.t. constarint6 {a in AIRPLANES}:
     sum {s in AVAILABLESLOT1} AssignedPlaneSlots[a,s] <= 1;
@@ -78,31 +81,30 @@ s.t. constarint15 {a in AIRPLANES}:
 s.t. constarint16 {a in AIRPLANES}:
     sum {s in AVAILABLESLOT11} AssignedPlaneSlots[a,s] <= 1;
 
-s.t. constraint17 {a in AIRPLANES}:
-    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] >= 5;
+s.t. constraint17 {a in AIRPLANES, s in AVAILABLESLOTS}:
+    AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] >= 5;
 
-s.t. constraint18 {a in PLANE1}:
-    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
-s.t. constraint19 {a in PLANE2}:
-    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
-s.t. constraint20 {a in PLANE3}:
-    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
-s.t. constraint21 {a in PLANE4}:
-    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
-s.t. constraint22 {a in PLANE5}:
-    sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
+s.t. constraint18 {a in PLANE1, s in AVAILABLESLOTS}:
+    AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
+s.t. constraint19 {a in PLANE2, s in AVAILABLESLOTS}:
+    AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
+s.t. constraint20 {a in PLANE3, s in AVAILABLESLOTS}:
+    AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
+s.t. constraint21 {a in PLANE4, s in AVAILABLESLOTS}:
+    AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
+s.t. constraint22 {a in PLANE5, s in AVAILABLESLOTS}:
+    AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a] <= maxallotedtime[a] - schedulelandingtime[a];
 
-s.t. constraint23 {a in AIRPLANES}:
-    sum {s in PAIR1} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint24 {a in AIRPLANES}:
-    sum {s in PAIR2} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint25 {a in AIRPLANES}:
-    sum {s in PAIR3} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint26 {a in AIRPLANES}:
-    sum {s in PAIR4} AssignedPlaneSlots[a,s] <= 1;
-s.t. constraint27 {a in AIRPLANES}:
-    sum {s in PAIR5} AssignedPlaneSlots[a,s] <= 1;
-
+s.t. constraint23 {s in PAIR1}:
+    sum {a in AIRPLANES} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint24 {s in PAIR2}:
+    sum {a in AIRPLANES} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint25 {s in PAIR3}:
+    sum {a in AIRPLANES} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint26 {s in PAIR4}:
+    sum {a in AIRPLANES} AssignedPlaneSlots[a,s] <= 1;
+s.t. constraint27 {s in PAIR5}:
+    sum {a in AIRPLANES} AssignedPlaneSlots[a,s] <= 1;
 solve;
-display TypeofTicketsperAirplane;
+display AssignedPlaneSlots;
 end;

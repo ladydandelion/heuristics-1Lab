@@ -20,11 +20,11 @@ set AVAILABLESLOT9 := As9;
 set AVAILABLESLOT10 := As10;
 set AVAILABLESLOT11 := As11;
 
-set PAIR1 := As1 As2
-set PAIR2 := As3 As4
-set PAIR3 := As5 As6
-set PAIR4 := As6 As7
-set PAIR5 := As10 As11
+set PAIR1 := As1 As2;
+set PAIR2 := As3 As4;
+set PAIR3 := As5 As6;
+set PAIR4 := As6 As7;
+set PAIR5 := As10 As11;
 
 param slotstime :=
 As1 600
