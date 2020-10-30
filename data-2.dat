@@ -1,0 +1,95 @@
+data;
+
+set AIRPLANES := Av1 Av2 Av3 Av4 Av5;
+set PLANE1 := Av1;
+set PLANE2 := Av2;
+set PLANE3 := Av3;
+set PLANE4 := Av4;
+set PLANE5 := Av5;
+
+set RUNAWAYS := R1 R2 R3 R4;
+set RUNAWAY1 := R1;
+set RUNAWAY2 := R2;
+set RUNAWAY3 := R3;
+set RUNAWAY4 := R4;
+
+set TIMESLOT := Times1 Times2 Times3 TimesS4 Times5 Times6;
+set TIMESLOT1 := Times1;
+set TIMESLOT2 := Times2;
+set TIMESLOT3 := Times3;
+set TIMESLOT4 := Times4;
+set TIMESLOT5 := Times5;
+set TIMESLOT6 := Times6;
+
+param initialslotime :=
+S1 540
+S2 555
+S3 570
+S4 585
+S5 600
+S6 615;
+
+param schedulelandingtime :=
+Av1 550
+Av2 535
+Av3 580
+Av4 595
+Av5 610;
+
+param maxallotedtime :=
+Av1 615
+Av2 570
+Av3 600
+Av4 615
+Av5 630;
+
+param costs :=
+Av1 100
+Av2 200
+Av3 150
+Av4 250
+Av5 200;
+
+param slotsplanes: Times1 Times2 Times3 Times4 Times5 Times6:=
+Av1 0 1 1 1 1 0
+Av2 1 1 0 0 0 0
+Av3 0 0 0 1 0 0
+Av4 0 0 0 0 1 0
+Av5 0 0 0 0 0 1;
+
+param p[RUNAWAYS, AIRPLANES, TIMESLOT];
+
+p[#R1,j,k] := table(k in TIMESLOT, j in AIRPLANES:
+                  Av1  Av2  Av3  Av4  Av5:
+              Times1  0  0   0   0   0
+              Times2  0  0   0   0   0
+              Times3  0  0   0   0   0
+              Times4  0  0   0   0   0
+              Times5  1  0   1   1   1
+              Times6  1  0   0   1   1);
+p[#R2,j,k] := table(k in TIMESLOT, j in AIRPLANES:
+                  Av1  Av2  Av3  Av4  Av5:
+              Times1  0  0   0   0   0
+              Times2  0  0   0   0   0
+              Times3  1  1   0   0   0
+              Times4  1  0   1   0   0
+              Times5  0  0   0   0   0
+              Times6  0  0   0   0   0);
+
+p[#R3,j,k] := table(k in TIMESLOT, j in AIRPLANES:
+                  Av1  Av2  Av3  Av4  Av5:
+              Times1  0  1   0   0   0
+              Times2  1  1   0   0   0
+              Times3  1  1   0   0   0
+              Times4  0  0   0   0   0
+              Times5  0  0   0   0   0
+              Times6  1  0   0   1   1);
+
+p[#R4,j,k] := table(k in TIMESLOT, j in AIRPLANES:
+                  Av1  Av2  Av3  Av4  Av5:
+              Times1  0  1   0   0   0
+              Times2  0  0   0   0   0
+              Times3  0  0   0   0   0
+              Times4  0  0   0   0   0
+              Times5  1  0   1   1   1
+              Times6  1  0   0   1   1);
