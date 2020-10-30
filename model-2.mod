@@ -23,8 +23,8 @@ set TIMESLOT6;
 
 /*PARAMS
 ----------------------------------------------------------------------------------*/
-param initialslotime {s in SLOTS};
-param schedulelandingtime {s in SLOTS};
+param initialslotime {t in TIMESLOTS};
+param schedulelandingtime {a in AIRPLANES};
 param maxallotedtime {a in AIRPLANES};
 param costs {a in AIRPLANES};
 param slotsplanes {t in TIMESLOT, a in AIRPLANES};
@@ -32,7 +32,8 @@ param p {r in RUNAWAYS, a in AIRPLANES, t in TIMESLOT};
 
 /*DECISION VARIABLES
 ----------------------------------------------------------------------------------*/
-var time{t };
+var time{a in AIRPLANES, t in TIMESLOT} := schedulelandingtime[a]- initialslotime[t];
+
 
 /*OPTIMIZATION FUNCTION
 ----------------------------------------------------------------------------------*/
