@@ -7,27 +7,37 @@ set PLANE3 := Av3;
 set PLANE4 := Av4;
 set PLANE5 := Av5;
 
-set RUNAWAYS := R1 R2 R3 R4;
-set RUNAWAY1 := R1;
-set RUNAWAY2 := R2;
-set RUNAWAY3 := R3;
-set RUNAWAY4 := R4;
+set AVAILABLESLOTS := As1 As2 As3 As4 As5 As6 As7 As8 As9 As10 As11;
+set AVAILABLESLOT1 := As1;
+set AVAILABLESLOT2 := As2;
+set AVAILABLESLOT3 := As3;
+set AVAILABLESLOT4 := As4;
+set AVAILABLESLOT5 := As5;
+set AVAILABLESLOT6 := As6;
+set AVAILABLESLOT7 := As7;
+set AVAILABLESLOT8 := As8;
+set AVAILABLESLOT9 := As9;
+set AVAILABLESLOT10 := As10;
+set AVAILABLESLOT11 := As11;
 
-set TIMESLOT := Times1 Times2 Times3 TimesS4 Times5 Times6;
-set TIMESLOT1 := Times1;
-set TIMESLOT2 := Times2;
-set TIMESLOT3 := Times3;
-set TIMESLOT4 := Times4;
-set TIMESLOT5 := Times5;
-set TIMESLOT6 := Times6;
+set PAIR1 := As1 As2
+set PAIR2 := As3 As4
+set PAIR3 := As5 As6
+set PAIR4 := As6 As7
+set PAIR5 := As10 As11
 
-param initialslotime :=
-S1 540
-S2 555
-S3 570
-S4 585
-S5 600
-S6 615;
+param slotstime :=
+As1 600
+As2 615
+As3 570
+As4 585
+As5 540
+As6 555
+As7 570
+As8 615
+As9 540
+As10 600
+As11 615;
 
 param schedulelandingtime :=
 Av1 550
@@ -50,46 +60,4 @@ Av3 150
 Av4 250
 Av5 200;
 
-param slotsplanes: Times1 Times2 Times3 Times4 Times5 Times6:=
-Av1 0 1 1 1 1 0
-Av2 1 1 0 0 0 0
-Av3 0 0 0 1 0 0
-Av4 0 0 0 0 1 0
-Av5 0 0 0 0 0 1;
-
-param p[RUNAWAYS, AIRPLANES, TIMESLOT];
-
-p[#R1,j,k] := table(k in TIMESLOT, j in AIRPLANES:
-                  Av1  Av2  Av3  Av4  Av5:
-              Times1  0  0   0   0   0
-              Times2  0  0   0   0   0
-              Times3  0  0   0   0   0
-              Times4  0  0   0   0   0
-              Times5  1  0   1   1   1
-              Times6  1  0   0   1   1);
-p[#R2,j,k] := table(k in TIMESLOT, j in AIRPLANES:
-                  Av1  Av2  Av3  Av4  Av5:
-              Times1  0  0   0   0   0
-              Times2  0  0   0   0   0
-              Times3  1  1   0   0   0
-              Times4  1  0   1   0   0
-              Times5  0  0   0   0   0
-              Times6  0  0   0   0   0);
-
-p[#R3,j,k] := table(k in TIMESLOT, j in AIRPLANES:
-                  Av1  Av2  Av3  Av4  Av5:
-              Times1  0  1   0   0   0
-              Times2  1  1   0   0   0
-              Times3  1  1   0   0   0
-              Times4  0  0   0   0   0
-              Times5  0  0   0   0   0
-              Times6  1  0   0   1   1);
-
-p[#R4,j,k] := table(k in TIMESLOT, j in AIRPLANES:
-                  Av1  Av2  Av3  Av4  Av5:
-              Times1  0  1   0   0   0
-              Times2  0  0   0   0   0
-              Times3  0  0   0   0   0
-              Times4  0  0   0   0   0
-              Times5  1  0   1   1   1
-              Times6  1  0   0   1   1);
+end;
