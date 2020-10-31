@@ -1,0 +1,238 @@
+Problem:    model_complete
+Rows:       54
+Columns:    70 (70 integer, 55 binary)
+Non-zeros:  450
+Status:     INTEGER OPTIMAL
+Objective:  Profits = 21690 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 Profits                 21690                             
+     2 constraint1[Av1]
+                                  90                          90 
+     3 constraint1[Av2]
+                                 120                         120 
+     4 constraint1[Av3]
+                                 200                         200 
+     5 constraint1[Av4]
+                                 150                         150 
+     6 constraint1[Av5]
+                                 190                         190 
+     7 constarint2[Av1]
+                                1698                        1700 
+     8 constarint2[Av2]
+                                2692                        2700 
+     9 constarint2[Av3]
+                                1300                        1300 
+    10 constarint2[Av4]
+                                1700                        1700 
+    11 constarint2[Av5]
+                                2000                        2000 
+    12 constraint3[Av1,LeisurePlus]
+                                  21            20               
+    13 constraint3[Av2,LeisurePlus]
+                                  43            20               
+    14 constraint3[Av3,LeisurePlus]
+                                  23            20               
+    15 constraint3[Av4,LeisurePlus]
+                                  20            20               
+    16 constraint3[Av5,LeisurePlus]
+                                  46            20               
+    17 constraint4[Av1,BusinessPlus]
+                                  31            10               
+    18 constraint4[Av2,BusinessPlus]
+                                  45            10               
+    19 constraint4[Av3,BusinessPlus]
+                                  17            10               
+    20 constraint4[Av4,BusinessPlus]
+                                  30            10               
+    21 constraint4[Av5,BusinessPlus]
+                                  24            10               
+    22 constraint5                 0            -0               
+    23 constraint6                 5             5             = 
+    24 constraint7                 1                           1 
+    25 constraint8                 1                           1 
+    26 constraint9                 1                           1 
+    27 constraint10                1                           1 
+    28 constraint11                1                           1 
+    29 constarint12                1                           1 
+    30 constarint13                0                           1 
+    31 constarint14                0                           1 
+    32 constarint15                1                           1 
+    33 constarint16                0                           1 
+    34 constarint17                1                           1 
+    35 constarint18                0                           1 
+    36 constarint19                0                           1 
+    37 constarint20                1                           1 
+    38 constarint21                0                           1 
+    39 constarint22                1                           1 
+    40 constraint23                5                          65 
+    41 constraint24                5                          35 
+    42 constraint25                5                          20 
+    43 constraint26                5                          20 
+    44 constraint27                5                          20 
+    45 constraint28                5             5               
+    46 constraint29                5             5               
+    47 constraint30                5             5               
+    48 constraint31                5             5               
+    49 constraint32                5             5               
+    50 constraint33                1                           1 
+    51 constraint34                1                           1 
+    52 constraint35                1                           1 
+    53 constraint36                1                           1 
+    54 constraint37                1                           1 
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 TypeofTicketsperAirplane[Av1,Standard]
+                    *             38             0               
+     2 TypeofTicketsperAirplane[Av1,LeisurePlus]
+                    *             21             0               
+     3 TypeofTicketsperAirplane[Av1,BusinessPlus]
+                    *             31             0               
+     4 TypeofTicketsperAirplane[Av2,Standard]
+                    *             32             0               
+     5 TypeofTicketsperAirplane[Av2,LeisurePlus]
+                    *             43             0               
+     6 TypeofTicketsperAirplane[Av2,BusinessPlus]
+                    *             45             0               
+     7 TypeofTicketsperAirplane[Av3,Standard]
+                    *            160             0               
+     8 TypeofTicketsperAirplane[Av3,LeisurePlus]
+                    *             23             0               
+     9 TypeofTicketsperAirplane[Av3,BusinessPlus]
+                    *             17             0               
+    10 TypeofTicketsperAirplane[Av4,Standard]
+                    *            100             0               
+    11 TypeofTicketsperAirplane[Av4,LeisurePlus]
+                    *             20             0               
+    12 TypeofTicketsperAirplane[Av4,BusinessPlus]
+                    *             30             0               
+    13 TypeofTicketsperAirplane[Av5,Standard]
+                    *            120             0               
+    14 TypeofTicketsperAirplane[Av5,LeisurePlus]
+                    *             46             0               
+    15 TypeofTicketsperAirplane[Av5,BusinessPlus]
+                    *             24             0               
+    16 AssignedPlaneSlots[Av1,As1]
+                    *              0             0             1 
+    17 AssignedPlaneSlots[Av1,As2]
+                    *              0             0             1 
+    18 AssignedPlaneSlots[Av1,As3]
+                    *              0             0             1 
+    19 AssignedPlaneSlots[Av1,As4]
+                    *              0             0             1 
+    20 AssignedPlaneSlots[Av1,As5]
+                    *              0             0             1 
+    21 AssignedPlaneSlots[Av1,As6]
+                    *              1             0             1 
+    22 AssignedPlaneSlots[Av1,As7]
+                    *              0             0             1 
+    23 AssignedPlaneSlots[Av1,As8]
+                    *              0             0             1 
+    24 AssignedPlaneSlots[Av1,As9]
+                    *              0             0             1 
+    25 AssignedPlaneSlots[Av1,As10]
+                    *              0             0             1 
+    26 AssignedPlaneSlots[Av1,As11]
+                    *              0             0             1 
+    27 AssignedPlaneSlots[Av2,As1]
+                    *              0             0             1 
+    28 AssignedPlaneSlots[Av2,As2]
+                    *              0             0             1 
+    29 AssignedPlaneSlots[Av2,As3]
+                    *              0             0             1 
+    30 AssignedPlaneSlots[Av2,As4]
+                    *              0             0             1 
+    31 AssignedPlaneSlots[Av2,As5]
+                    *              0             0             1 
+    32 AssignedPlaneSlots[Av2,As6]
+                    *              0             0             1 
+    33 AssignedPlaneSlots[Av2,As7]
+                    *              0             0             1 
+    34 AssignedPlaneSlots[Av2,As8]
+                    *              0             0             1 
+    35 AssignedPlaneSlots[Av2,As9]
+                    *              1             0             1 
+    36 AssignedPlaneSlots[Av2,As10]
+                    *              0             0             1 
+    37 AssignedPlaneSlots[Av2,As11]
+                    *              0             0             1 
+    38 AssignedPlaneSlots[Av3,As1]
+                    *              0             0             1 
+    39 AssignedPlaneSlots[Av3,As2]
+                    *              0             0             1 
+    40 AssignedPlaneSlots[Av3,As3]
+                    *              0             0             1 
+    41 AssignedPlaneSlots[Av3,As4]
+                    *              1             0             1 
+    42 AssignedPlaneSlots[Av3,As5]
+                    *              0             0             1 
+    43 AssignedPlaneSlots[Av3,As6]
+                    *              0             0             1 
+    44 AssignedPlaneSlots[Av3,As7]
+                    *              0             0             1 
+    45 AssignedPlaneSlots[Av3,As8]
+                    *              0             0             1 
+    46 AssignedPlaneSlots[Av3,As9]
+                    *              0             0             1 
+    47 AssignedPlaneSlots[Av3,As10]
+                    *              0             0             1 
+    48 AssignedPlaneSlots[Av3,As11]
+                    *              0             0             1 
+    49 AssignedPlaneSlots[Av4,As1]
+                    *              1             0             1 
+    50 AssignedPlaneSlots[Av4,As2]
+                    *              0             0             1 
+    51 AssignedPlaneSlots[Av4,As3]
+                    *              0             0             1 
+    52 AssignedPlaneSlots[Av4,As4]
+                    *              0             0             1 
+    53 AssignedPlaneSlots[Av4,As5]
+                    *              0             0             1 
+    54 AssignedPlaneSlots[Av4,As6]
+                    *              0             0             1 
+    55 AssignedPlaneSlots[Av4,As7]
+                    *              0             0             1 
+    56 AssignedPlaneSlots[Av4,As8]
+                    *              0             0             1 
+    57 AssignedPlaneSlots[Av4,As9]
+                    *              0             0             1 
+    58 AssignedPlaneSlots[Av4,As10]
+                    *              0             0             1 
+    59 AssignedPlaneSlots[Av4,As11]
+                    *              0             0             1 
+    60 AssignedPlaneSlots[Av5,As1]
+                    *              0             0             1 
+    61 AssignedPlaneSlots[Av5,As2]
+                    *              0             0             1 
+    62 AssignedPlaneSlots[Av5,As3]
+                    *              0             0             1 
+    63 AssignedPlaneSlots[Av5,As4]
+                    *              0             0             1 
+    64 AssignedPlaneSlots[Av5,As5]
+                    *              0             0             1 
+    65 AssignedPlaneSlots[Av5,As6]
+                    *              0             0             1 
+    66 AssignedPlaneSlots[Av5,As7]
+                    *              0             0             1 
+    67 AssignedPlaneSlots[Av5,As8]
+                    *              0             0             1 
+    68 AssignedPlaneSlots[Av5,As9]
+                    *              0             0             1 
+    69 AssignedPlaneSlots[Av5,As10]
+                    *              0             0             1 
+    70 AssignedPlaneSlots[Av5,As11]
+                    *              1             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

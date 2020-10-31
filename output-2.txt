@@ -1,0 +1,172 @@
+Problem:    model
+Rows:       33
+Columns:    55 (55 integer, 55 binary)
+Non-zeros:  380
+Status:     INTEGER OPTIMAL
+Objective:  DelayCosts = 4500 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 DelayCosts               4500                             
+     2 constraint0                 5             5             = 
+     3 constraint1                 1                           1 
+     4 constraint2                 1                           1 
+     5 constraint3                 1                           1 
+     6 constraint4                 1                           1 
+     7 constraint5                 1                           1 
+     8 constarint6                 1                           1 
+     9 constarint7                 0                           1 
+    10 constarint8                 0                           1 
+    11 constarint9                 1                           1 
+    12 constarint10                0                           1 
+    13 constarint11                1                           1 
+    14 constarint12                0                           1 
+    15 constarint13                0                           1 
+    16 constarint14                1                           1 
+    17 constarint15                0                           1 
+    18 constarint16                1                           1 
+    19 constraint18                5                          65 
+    20 constraint19                5                          35 
+    21 constraint20                5                          20 
+    22 constraint21                5                          20 
+    23 constraint22                5                          20 
+    24 constraint180
+                                   5             5               
+    25 constraint190
+                                   5             5               
+    26 constraint200
+                                   5             5               
+    27 constraint210
+                                   5             5               
+    28 constraint220
+                                   5             5               
+    29 constraint23                1                           1 
+    30 constraint24                1                           1 
+    31 constraint25                1                           1 
+    32 constraint26                1                           1 
+    33 constraint27                1                           1 
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 AssignedPlaneSlots[Av1,As1]
+                    *              0             0             1 
+     2 AssignedPlaneSlots[Av1,As2]
+                    *              0             0             1 
+     3 AssignedPlaneSlots[Av1,As3]
+                    *              0             0             1 
+     4 AssignedPlaneSlots[Av1,As4]
+                    *              0             0             1 
+     5 AssignedPlaneSlots[Av1,As5]
+                    *              0             0             1 
+     6 AssignedPlaneSlots[Av1,As6]
+                    *              1             0             1 
+     7 AssignedPlaneSlots[Av1,As7]
+                    *              0             0             1 
+     8 AssignedPlaneSlots[Av1,As8]
+                    *              0             0             1 
+     9 AssignedPlaneSlots[Av1,As9]
+                    *              0             0             1 
+    10 AssignedPlaneSlots[Av1,As10]
+                    *              0             0             1 
+    11 AssignedPlaneSlots[Av1,As11]
+                    *              0             0             1 
+    12 AssignedPlaneSlots[Av2,As1]
+                    *              0             0             1 
+    13 AssignedPlaneSlots[Av2,As2]
+                    *              0             0             1 
+    14 AssignedPlaneSlots[Av2,As3]
+                    *              0             0             1 
+    15 AssignedPlaneSlots[Av2,As4]
+                    *              0             0             1 
+    16 AssignedPlaneSlots[Av2,As5]
+                    *              0             0             1 
+    17 AssignedPlaneSlots[Av2,As6]
+                    *              0             0             1 
+    18 AssignedPlaneSlots[Av2,As7]
+                    *              0             0             1 
+    19 AssignedPlaneSlots[Av2,As8]
+                    *              0             0             1 
+    20 AssignedPlaneSlots[Av2,As9]
+                    *              1             0             1 
+    21 AssignedPlaneSlots[Av2,As10]
+                    *              0             0             1 
+    22 AssignedPlaneSlots[Av2,As11]
+                    *              0             0             1 
+    23 AssignedPlaneSlots[Av3,As1]
+                    *              0             0             1 
+    24 AssignedPlaneSlots[Av3,As2]
+                    *              0             0             1 
+    25 AssignedPlaneSlots[Av3,As3]
+                    *              0             0             1 
+    26 AssignedPlaneSlots[Av3,As4]
+                    *              1             0             1 
+    27 AssignedPlaneSlots[Av3,As5]
+                    *              0             0             1 
+    28 AssignedPlaneSlots[Av3,As6]
+                    *              0             0             1 
+    29 AssignedPlaneSlots[Av3,As7]
+                    *              0             0             1 
+    30 AssignedPlaneSlots[Av3,As8]
+                    *              0             0             1 
+    31 AssignedPlaneSlots[Av3,As9]
+                    *              0             0             1 
+    32 AssignedPlaneSlots[Av3,As10]
+                    *              0             0             1 
+    33 AssignedPlaneSlots[Av3,As11]
+                    *              0             0             1 
+    34 AssignedPlaneSlots[Av4,As1]
+                    *              1             0             1 
+    35 AssignedPlaneSlots[Av4,As2]
+                    *              0             0             1 
+    36 AssignedPlaneSlots[Av4,As3]
+                    *              0             0             1 
+    37 AssignedPlaneSlots[Av4,As4]
+                    *              0             0             1 
+    38 AssignedPlaneSlots[Av4,As5]
+                    *              0             0             1 
+    39 AssignedPlaneSlots[Av4,As6]
+                    *              0             0             1 
+    40 AssignedPlaneSlots[Av4,As7]
+                    *              0             0             1 
+    41 AssignedPlaneSlots[Av4,As8]
+                    *              0             0             1 
+    42 AssignedPlaneSlots[Av4,As9]
+                    *              0             0             1 
+    43 AssignedPlaneSlots[Av4,As10]
+                    *              0             0             1 
+    44 AssignedPlaneSlots[Av4,As11]
+                    *              0             0             1 
+    45 AssignedPlaneSlots[Av5,As1]
+                    *              0             0             1 
+    46 AssignedPlaneSlots[Av5,As2]
+                    *              0             0             1 
+    47 AssignedPlaneSlots[Av5,As3]
+                    *              0             0             1 
+    48 AssignedPlaneSlots[Av5,As4]
+                    *              0             0             1 
+    49 AssignedPlaneSlots[Av5,As5]
+                    *              0             0             1 
+    50 AssignedPlaneSlots[Av5,As6]
+                    *              0             0             1 
+    51 AssignedPlaneSlots[Av5,As7]
+                    *              0             0             1 
+    52 AssignedPlaneSlots[Av5,As8]
+                    *              0             0             1 
+    53 AssignedPlaneSlots[Av5,As9]
+                    *              0             0             1 
+    54 AssignedPlaneSlots[Av5,As10]
+                    *              0             0             1 
+    55 AssignedPlaneSlots[Av5,As11]
+                    *              1             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

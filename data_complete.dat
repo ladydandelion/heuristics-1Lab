@@ -1,0 +1,85 @@
+data;
+
+set AIRPLANES := Av1 Av2 Av3 Av4 Av5;
+set PLANE1 := Av1;
+set PLANE2 := Av2;
+set PLANE3 := Av3;
+set PLANE4 := Av4;
+set PLANE5 := Av5;
+
+set SLOTS := Standard LeisurePlus BusinessPlus;
+set TYPE1 := Standard;
+set TYPE2 := LeisurePlus;
+set TYPE3 := BusinessPlus;
+
+set AVAILABLESLOTS := As1 As2 As3 As4 As5 As6 As7 As8 As9 As10 As11;
+set AVAILABLESLOT1 := As1;
+set AVAILABLESLOT2 := As2;
+set AVAILABLESLOT3 := As3;
+set AVAILABLESLOT4 := As4;
+set AVAILABLESLOT5 := As5;
+set AVAILABLESLOT6 := As6;
+set AVAILABLESLOT7 := As7;
+set AVAILABLESLOT8 := As8;
+set AVAILABLESLOT9 := As9;
+set AVAILABLESLOT10 := As10;
+set AVAILABLESLOT11 := As11;
+
+set PAIR1 := As1 As2;
+set PAIR2 := As3 As4;
+set PAIR3 := As5 As6;
+set PAIR4 := As6 As7;
+set PAIR5 := As10 As11;
+
+param baggage :=
+Standard 1
+LeisurePlus 20
+BusinessPlus 40;
+
+param pricing:=
+Standard 19
+LeisurePlus 49
+BusinessPlus 69;
+
+param totalAirplaneSeats :=
+Av1 90
+Av2 120
+Av3 200
+Av4 150
+Av5 190;
+
+param capacity :=
+Av1 1700
+Av2 2700
+Av3 1300
+Av4 1700
+Av5 2000;
+
+param slotstime :=
+As1 600
+As2 615
+As3 570
+As4 585
+As5 540
+As6 555
+As7 570
+As8 615
+As9 540
+As10 600
+As11 615;
+
+param schedulelandingtime :=
+Av1 550
+Av2 535
+Av3 580
+Av4 595
+Av5 610;
+
+param costs :=
+Av1 100
+Av2 200
+Av3 150
+Av4 250
+Av5 200;
+
+end;
