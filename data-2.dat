@@ -46,13 +46,6 @@ Av3 580
 Av4 595
 Av5 610;
 
-param maxallotedtime :=
-Av1 615
-Av2 570
-Av3 600
-Av4 615
-Av5 630;
-
 param costs :=
 Av1 100
 Av2 200
