@@ -35,17 +35,17 @@ param costs {a in AIRPLANES};
 
 /*DECISION VARIABLES
 ----------------------------------------------------------------------------------*/
-var AssignedPlaneSlots {a in AIRPLANES, s in AVAILABLESLOTS} integer, >=0;
+var AssignedPlaneSlots {a in AIRPLANES, s in AVAILABLESLOTS}, binary;
 
 /*OPTIMIZATION FUNCTION
 ----------------------------------------------------------------------------------*/
 minimize DelayCosts:
-    sum {a in AIRPLANES, s in AVAILABLESLOTS} costs[a]*(AssignedPlaneSlots[a,s]*slotstime[s] - schedulelandingtime[a]);
+    sum {a in AIRPLANES, s in AVAILABLESLOTS} AssignedPlaneSlots[a,s]*((slotstime[s] - schedulelandingtime[a])*costs[a]);
 
 /*DECISION VARIABLES
 ----------------------------------------------------------------------------------*/
-s.t. constraint44:
-    sum {a in AIRPLANES, s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] = 5;
+/*s.t. constraint44:
+    sum {a in AIRPLANES, s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] = 5;*/
 
 s.t. constraint1 {a in PLANE1}:
     sum {s in AVAILABLESLOTS} AssignedPlaneSlots[a,s] <= 1;
