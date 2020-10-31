@@ -93,86 +93,147 @@ maximize Profits:
 s.t. constraint1 {a in AIRPLANES}:
     sum {s in FAIR} TypeofTicketsperAirplane[a,s]  <= totalAirplaneSeats[a];
 
-/*Constarint to check that the capacity of each airplane is not exceeded*/
-s.t. constarint2 {a in AIRPLANES}:
+/*Constraint to check that the capacity of each airplane is not exceeded*/
+s.t. Constraint2 {a in AIRPLANES}:
     sum {s in FAIR} baggage[s]*TypeofTicketsperAirplane[a,s] <= capacity[a];
 
+/*Constraint to check that the number of Leisure Plus tickets does not exceed 20*/
 s.t. constraint3 {a in AIRPLANES, s in TYPE2}:
     TypeofTicketsperAirplane[a,s] >= 20;
 
+/*Constraint to check that the number of Business Plus tickets does not exceed 10*/
 s.t. constraint4 {a in AIRPLANES, s in TYPE3}:
     TypeofTicketsperAirplane[a,s] >= 10;
 
+/*Constraint to check that the number of Standard tickets is at least 60% of the total amount*/
 s.t. constraint5:
     sum {a in AIRPLANES, s in TYPE1} TypeofTicketsperAirplane[a,s] >= 0.6*(sum {a in AIRPLANES, s in FAIR} TypeofTicketsperAirplane[a,s]);
 
+/*Constraint to check that the number of slots used by the planes does not exceed 5*/
 s.t. constraint6:
     sum {v in AVAILABLESLOTS, a in AIRPLANES} AssignedPlaneSlots[a,v] = 5;
 
+/*Constraint to check that the number of slots used by the Av1 is 1*/
 s.t. constraint7:
     sum {a in PLANE1, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of slots used by the Av2 is 1*/
 s.t. constraint8:
     sum {a in PLANE2, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of slots used by the Av3 is 1*/
 s.t. constraint9:
     sum {a in PLANE3, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of slots used by the Av4 is 1*/
 s.t. constraint10:
     sum {a in PLANE4, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of slots used by the Av5 is 1*/
 s.t. constraint11:
     sum {a in PLANE5, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v] <= 1;
 
-s.t. constarint12:
+/*Constraint to check that the number of planes using the first available slot is 1*/
+s.t. constraint12:
     sum {a in AIRPLANES, v in AVAILABLESLOT1} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint13:
+
+/*Constraint to check that the number of planes using the second available slot is 1*/
+s.t. constraint13:
     sum {a in AIRPLANES, v in AVAILABLESLOT2} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint14:
+
+/*Constraint to check that the number of planes using the third available slot is 1*/
+s.t. constraint14:
     sum {a in AIRPLANES, v in AVAILABLESLOT3} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint15:
+
+/*Constraint to check that the number of planes using the fourth available slot is 1*/
+s.t. constraint15:
     sum {a in AIRPLANES, v in AVAILABLESLOT4} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint16:
+
+/*Constraint to check that the number of planes using the fifth available slot is 1*/
+s.t. constraint16:
     sum {a in AIRPLANES, v in AVAILABLESLOT5} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint17:
+
+/*Constraint to check that the number of planes using the sixth available slot is 1*/
+s.t. constraint17:
     sum {a in AIRPLANES, v in AVAILABLESLOT6} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint18:
+
+/*Constraint to check that the number of planes using the seventh available slot is 1*/
+s.t. constraint18:
     sum {a in AIRPLANES, v in AVAILABLESLOT7} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint19:
+
+/*Constraint to check that the number of planes using the eighth available slot is 1*/
+s.t. constraint19:
     sum {a in AIRPLANES, v in AVAILABLESLOT8} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint20:
+
+/*Constraint to check that the number of planes using the ninth available slot is 1*/
+s.t. constraint20:
     sum {a in AIRPLANES, v in AVAILABLESLOT9} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint21:
+
+/*Constraint to check that the number of planes using the tenth available slot is 1*/
+s.t. constraint21:
     sum {a in AIRPLANES, v in AVAILABLESLOT10} AssignedPlaneSlots[a,v] <= 1;
-s.t. constarint22:
+
+/*Constraint to check that the number of planes using the eleventh available slot is 1*/
+s.t. constraint22:
     sum {a in AIRPLANES, v in AVAILABLESLOT11} AssignedPlaneSlots[a,v] <= 1;
 
+/*Constraint to check that the amount of time Av1 spends on the air after arrival does not exceeded 65 minutes*/
 s.t. constraint23:
     sum {a in PLANE1, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) <= 65;
+
+/*Constraint to check that the amount of time Av2 spends on the air after arrival does not exceeded 35 minutes*/
 s.t. constraint24:
     sum {a in PLANE2, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) <= 35;
+
+/*Constraint to check that the amount of time Av3 spends on the air after arrival does not exceeded 20 minutes*/
 s.t. constraint25:
     sum {a in PLANE3, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) <= 20;
+
+/*Constraint to check that the amount of time Av4 spends on the air after arrival does not exceeded 20 minutes*/
 s.t. constraint26:
     sum {a in PLANE4, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) <= 20;
+
+/*Constraint to check that the amount of time Av5 spends on the air after arrival does not exceeded 20 minutes*/
 s.t. constraint27:
     sum {a in PLANE5, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) <= 20;
 
+/*Constraint to check that the amount of time Av1 spends on the air after arrival exceeds 5 minutes*/
 s.t. constraint28:
     sum {a in PLANE1, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) >= 5;
+
+/*Constraint to check that the amount of time Av2 spends on the air after arrival exceeds 5 minutes*/
 s.t. constraint29:
     sum {a in PLANE2, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) >= 5;
+
+/*Constraint to check that the amount of time Av3 spends on the air after arrival exceeds 5 minutes*/
 s.t. constraint30:
     sum {a in PLANE3, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) >= 5;
+
+/*Constraint to check that the amount of time Av4 spends on the air after arrival exceeds 5 minutes*/
 s.t. constraint31:
     sum {a in PLANE4, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) >= 5;
+
+/*Constraint to check that the amount of time Av5 spends on the air after arrival exceeds 5 minutes*/
 s.t. constraint32:
     sum {a in PLANE5, v in AVAILABLESLOTS} AssignedPlaneSlots[a,v]*(slotstime[v] - schedulelandingtime[a]) >= 5;
 
+/*Constraint to check that the number of planes in the first pair of adjacent slots is 1*/
 s.t. constraint33:
     sum {a in AIRPLANES, v in PAIR1} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of planes in the second pair of adjacent slots is 1*/
 s.t. constraint34:
     sum {a in AIRPLANES, v in PAIR2} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of planes in the third pair of adjacent slots is 1*/
 s.t. constraint35:
     sum {a in AIRPLANES, v in PAIR3} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of planes in the fourth pair of adjacent slots is 1*/
 s.t. constraint36:
     sum {a in AIRPLANES, v in PAIR4} AssignedPlaneSlots[a,v] <= 1;
+
+/*Constraint to check that the number of planes in the fifth pair of adjacent slots is 1*/
 s.t. constraint37:
     sum {a in AIRPLANES, v in PAIR5} AssignedPlaneSlots[a,v] <= 1;
 solve;
