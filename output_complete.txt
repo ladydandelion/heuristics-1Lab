@@ -18,15 +18,15 @@ Objective:  Profits = 21690 (MAXimum)
                                  150                         150 
      6 constraint1[Av5]
                                  190                         190 
-     7 constarint2[Av1]
+     7 Constraint2[Av1]
                                 1698                        1700 
-     8 constarint2[Av2]
+     8 Constraint2[Av2]
                                 2692                        2700 
-     9 constarint2[Av3]
+     9 Constraint2[Av3]
                                 1300                        1300 
-    10 constarint2[Av4]
+    10 Constraint2[Av4]
                                 1700                        1700 
-    11 constarint2[Av5]
+    11 Constraint2[Av5]
                                 2000                        2000 
     12 constraint3[Av1,LeisurePlus]
                                   21            20               
@@ -55,22 +55,27 @@ Objective:  Profits = 21690 (MAXimum)
     26 constraint9                 1                           1 
     27 constraint10                1                           1 
     28 constraint11                1                           1 
-    29 constarint12                1                           1 
-    30 constarint13                0                           1 
-    31 constarint14                0                           1 
-    32 constarint15                1                           1 
-    33 constarint16                0                           1 
-    34 constarint17                1                           1 
-    35 constarint18                0                           1 
-    36 constarint19                0                           1 
-    37 constarint20                1                           1 
-    38 constarint21                0                           1 
-    39 constarint22                1                           1 
-    40 constraint23                5                          65 
-    41 constraint24                5                          35 
-    42 constraint25                5                          20 
-    43 constraint26                5                          20 
-    44 constraint27                5                          20 
+    29 constraint12                1                           1 
+    30 constraint13                0                           1 
+    31 constraint14                0                           1 
+    32 constraint15                1                           1 
+    33 constraint16                0                           1 
+    34 constraint17                1                           1 
+    35 constraint18                0                           1 
+    36 constraint19                0                           1 
+    37 constraint20                1                           1 
+    38 constraint21                0                           1 
+    39 constraint22                1                           1 
+    40 constraint23[Av1]
+                                   5                          65 
+    41 constraint24[Av2]
+                                   5                          35 
+    42 constraint25[Av3]
+                                   5                          20 
+    43 constraint26[Av4]
+                                   5                          20 
+    44 constraint27[Av5]
+                                   5                          20 
     45 constraint28                5             5               
     46 constraint29                5             5               
     47 constraint30                5             5               
