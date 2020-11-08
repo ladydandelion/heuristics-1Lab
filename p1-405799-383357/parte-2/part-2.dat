@@ -1,0 +1,159 @@
+data;
+/*Definition of the airplanes set*/
+set AIRPLANES := Av1 Av2 Av3 Av4 Av5;
+/*Subset of AIRPLANES containing plane 1 (Av1)*/
+set PLANE1 := Av1;
+/*Subset of AIRPLANES containing plane 2 (Av2)*/
+set PLANE2 := Av2;
+/*Subset of AIRPLANES containing plane 3 (Av3)*/
+set PLANE3 := Av3;
+/*Subset of AIRPLANES containing plane 4 (Av4)*/
+set PLANE4 := Av4;
+/*Subset of AIRPLANES containing plane 5 (Av5)*/
+set PLANE5 := Av5;
+
+/*Definition of the tickets types set*/
+set FAIR := Standard LeisurePlus BusinessPlus;
+/*Subset of FAIR containing standard ticket type*/
+set TYPE1 := Standard;
+/*Subset of FAIR containing LeisurePlus ticket type*/
+set TYPE2 := LeisurePlus;
+/*Subset of FAIR containing businessPlus ticket type*/
+set TYPE3 := BusinessPlus;
+
+/*Definition of the available runaway slots set*/
+set AVAILABLESLOTS := As1 As2 As3 As4 As5 As6 As7 As8 As9 As10 As11;
+/*Subset of AVAILABLESLOTS containing the first slot (As1)*/
+set AVAILABLESLOT1 := As1;
+/*Subset of AVAILABLESLOTS containing the second slot (As2)*/
+set AVAILABLESLOT2 := As2;
+/*Subset of AVAILABLESLOTS containing the third slot (As3)*/
+set AVAILABLESLOT3 := As3;
+/*Subset of AVAILABLESLOTS containing the fourth slot (As4)*/
+set AVAILABLESLOT4 := As4;
+/*Subset of AVAILABLESLOTS containing the fifth slot (As5)*/
+set AVAILABLESLOT5 := As5;
+/*Subset of AVAILABLESLOTS containing the sixth slot (As6)*/
+set AVAILABLESLOT6 := As6;
+/*Subset of AVAILABLESLOTS containing the seventh slot (As7)*/
+set AVAILABLESLOT7 := As7;
+/*Subset of AVAILABLESLOTS containing the eighth slot (As8)*/
+set AVAILABLESLOT8 := As8;
+/*Subset of AVAILABLESLOTS containing the ninth slot (As9)*/
+set AVAILABLESLOT9 := As9;
+/*Subset of AVAILABLESLOTS containing the tenth slot (As10)*/
+set AVAILABLESLOT10 := As10;
+/*Subset of AVAILABLESLOTS containing the eleventh slot (As11)*/
+set AVAILABLESLOT11 := As11;
+
+/*Subset of AVAILABLESLOTS containing adjacent slots As1 and As2*/
+set PAIR1 := As1 As2;
+/*Subset of AVAILABLESLOTS containing adjacent slots As3 and As4*/
+set PAIR2 := As3 As4;
+/*Subset of AVAILABLESLOTS containing adjacent slots As5 and As6*/
+set PAIR3 := As5 As6;
+/*Subset of AVAILABLESLOTS containing adjacent slots As6 and As7*/
+set PAIR4 := As6 As7;
+/*Subset of AVAILABLESLOTS containing adjacent slots As10 and As11*/
+set PAIR5 := As10 As11;
+
+/* Definition of the allowed baggage you can carry with each fair type */
+param baggage :=
+Standard 1
+LeisurePlus 20
+BusinessPlus 40;
+
+/* Definition of the price stablished for each fair */
+param pricing:=
+Standard 19
+LeisurePlus 49
+BusinessPlus 69;
+
+/* Definition of the seats stablished for each plane */
+param totalAirplaneSeats :=
+Av1 90
+Av2 120
+Av3 200
+Av4 150
+Av5 190;
+
+/* Definition of the capacity of each plane */
+param capacity :=
+Av1 1700
+Av2 2700
+Av3 1300
+Av4 1700
+Av5 2000;
+
+/*Minimum number of Leisure Plus tickets*/
+param minLeisurePlus := 20;
+
+/*Minimum number of Business Plus tickets*/
+param minBusinessPlus :=10;
+
+/*Minimum percentage of total Standard Tickets*/
+param totalStandardTickets := 0.6;
+
+/*The occupied slot is identify by a one*/
+param occupiedSlot := 1;
+
+/*Define the total number of slots that can be occupied in our matrix*/
+param totalOccupiedSlot := 5;
+
+/*Defines the necessary minimum time in all planes of delay between the schedulelanding
+landing and landing time in a slot*/
+param possibleRealLanding := 5;
+
+
+/* Definition of the time in minutes of each available slot*/
+param slotstime :=
+As1 600
+As2 615
+As3 570
+As4 585
+As5 540
+As6 555
+As7 570
+As8 615
+As9 540
+As10 600
+As11 615;
+
+/* Definition of the schedule time in minutes of each plane*/
+param schedulelandingtime :=
+Av1 550
+Av2 535
+Av3 580
+Av4 595
+Av5 610;
+
+/* Definition of the maximum landing time of the first plane*/
+param maxLandingTime1 :=
+Av1 615;
+
+/* Definition of the maximum landing time of the second plane*/
+param maxLandingTime2 :=
+Av2 570;
+
+/* Definition of the maximum landing time of the third plane*/
+param maxLandingTime3 :=
+Av3 600;
+
+/* Definition of the maximum landing time of the fourth plane*/
+param maxLandingTime4 :=
+Av4 615;
+
+/* Definition of the maximum landing time of the fifth plane*/
+param maxLandingTime5 :=
+Av5 630;
+
+
+/* Definition of the cost for each delayed minute in each airplane*/
+param costs :=
+Av1 100
+Av2 200
+Av3 150
+Av4 250
+Av5 200;
+
+end;
